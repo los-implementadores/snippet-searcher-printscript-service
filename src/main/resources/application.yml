@@ -1,0 +1,53 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: template
+  config:
+    # Loads a .env file from the working directory, if there is one (see .env.example). Real
+    # environment variables with the same names win over the file.
+    import: optional:file:.env[.properties]
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:${DB_PORT:5432}/template}
+    username: ${DB_USER:template}
+    password: ${DB_PASSWORD:template}
+  jpa:
+    open-in-view: false
+    hibernate:
+      # Flyway owns the schema (src/main/resources/db/migration); Hibernate only checks it matches.
+      ddl-auto: validate
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # Auth0 tenant, e.g. https://<tenant>.us.auth0.com/ (scheme and trailing slash included:
+          # it must match the token's "iss" exactly)
+          issuer-uri: ${AUTH_ISSUER_URI}
+          # Identifier of the Auth0 API: tokens issued for another API are rejected
+          audiences: ${AUTH_AUDIENCE}
+  http:
+    client:
+      # Applies to every RestClient (see http/ServiceClientFactory). Without a read timeout, a
+      # service that hangs keeps this one's request threads waiting forever.
+      connect-timeout: 2s
+      read-timeout: 10s
+
+cors:
+  allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173}
+
+logging:
+  pattern:
+    # Every line carries the request's correlation id and user (see observability/)
+    correlation: "[%X{correlationId:-},%X{userId:-}] "
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      # /actuator/health/liveness and /actuator/health/readiness, for the Swarm healthcheck
+      probes:
+        enabled: true

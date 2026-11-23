@@ -1,0 +1,8 @@
+# Active in the Docker image (SPRING_PROFILES_ACTIVE=production).
+
+logging:
+  structured:
+    format:
+      # One JSON object per line (Elastic Common Schema), MDC included: New Relic can filter by
+      # correlationId, userId or service instead of grepping text.
+      console: ecs
