@@ -27,7 +27,7 @@ spring:
           # Identifier of the Auth0 API: tokens issued for another API are rejected
           audiences: ${AUTH_AUDIENCE}
   http:
-    client:
+    clients:
       # Applies to every RestClient (see http/ServiceClientFactory). Without a read timeout, a
       # service that hangs keeps this one's request threads waiting forever.
       connect-timeout: 2s

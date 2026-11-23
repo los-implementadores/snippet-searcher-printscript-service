@@ -4,7 +4,7 @@ Base para los microservicios de Snippet Searcher en Spring Boot. Trae resuelto l
 igual en todos los servicios (auth con Auth0, logs con correlation id, formato de errores, CI/CD a
 GHCR), para que cada repo arranque directo con su dominio.
 
-Stack: Java 17, Spring Boot 3.5, Gradle (Kotlin DSL), Postgres + Flyway, JUnit 5. Mismas quality
+Stack: Java 21, Spring Boot 4.1, Gradle (Kotlin DSL), Postgres + Flyway, JUnit 5. Mismas quality
 gates que PrintScript y el snippets service: Spotless (google-java-format), Checkstyle y PMD.
 
 ## Crear un servicio nuevo

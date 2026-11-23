@@ -1,5 +1,5 @@
 plugins {
-    // If the JDK the toolchain asks for (17) isn't installed, Gradle downloads it.
+    // If the JDK the toolchain asks for (21) isn't installed, Gradle downloads it.
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
 

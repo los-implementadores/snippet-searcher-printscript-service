@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17-jdk AS build
+FROM eclipse-temurin:21-jdk AS build
 WORKDIR /app
 # Dependencies first: this layer is reused while build.gradle.kts doesn't change.
 COPY gradlew settings.gradle.kts build.gradle.kts ./
@@ -8,7 +8,7 @@ COPY newrelic newrelic
 COPY src src
 RUN ./gradlew bootJar copyNewRelic --no-daemon -q
 
-FROM eclipse-temurin:17-jre
+FROM eclipse-temurin:21-jre
 RUN groupadd --system app && useradd --system --gid app --no-create-home app
 WORKDIR /app
 COPY --from=build /app/build/libs/app.jar app.jar
