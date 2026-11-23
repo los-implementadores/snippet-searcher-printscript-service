@@ -1,7 +1,7 @@
-package org.snippetsearcher.template.http;
+package org.snippetsearcher.printscript.http;
 
 import java.io.IOException;
-import org.snippetsearcher.template.observability.CorrelationId;
+import org.snippetsearcher.printscript.observability.CorrelationId;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpRequest;
 import org.springframework.http.client.ClientHttpRequestExecution;

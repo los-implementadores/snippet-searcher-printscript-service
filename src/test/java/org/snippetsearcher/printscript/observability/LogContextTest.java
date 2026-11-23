@@ -1,4 +1,4 @@
-package org.snippetsearcher.template.observability;
+package org.snippetsearcher.printscript.observability;
 
 import static org.hamcrest.Matchers.matchesPattern;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.jwt;

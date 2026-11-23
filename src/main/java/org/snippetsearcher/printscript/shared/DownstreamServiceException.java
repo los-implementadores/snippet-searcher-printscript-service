@@ -1,4 +1,4 @@
-package org.snippetsearcher.template.shared;
+package org.snippetsearcher.printscript.shared;
 
 /** A service this one depends on failed or is unreachable. */
 public class DownstreamServiceException extends RuntimeException {

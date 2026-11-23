@@ -1,30 +1,16 @@
-# Snippet Searcher — template de servicio
+# Snippet Searcher — PrintScript service
 
-Base para los microservicios de Snippet Searcher en Spring Boot. Trae resuelto lo que tiene que ser
-igual en todos los servicios (auth con Auth0, logs con correlation id, formato de errores, CI/CD a
-GHCR), para que cada repo arranque directo con su dominio.
+Servicio de lenguaje de PrintScript para Snippet Searcher. Valida, lintea, formatea y corre los tests
+de los snippets escritos en PrintScript, y guarda las reglas de lint y de formato de cada usuario.
+Usa [PrintScript](https://github.com/los-implementadores/PrintScript) como librería.
+
+La arquitectura y cómo se comunica con los otros servicios están en
+[snippet-searcher-infra](https://github.com/los-implementadores/snippet-searcher-infra).
 
 Stack: Java 21, Spring Boot 4.1, Gradle (Kotlin DSL), Postgres + Flyway, JUnit 5. Mismas quality
 gates que PrintScript y el snippets service: Spotless (google-java-format), Checkstyle y PMD.
 
-## Crear un servicio nuevo
-
-```bash
-gh repo create los-implementadores/snippet-searcher-<nombre>-service \
-  --template los-implementadores/snippet-searcher-service-template --private --clone
-cd snippet-searcher-<nombre>-service
-./scripts/init-service.sh <nombre>      # ej: permissions, printscript
-./gradlew build
-git add -A && git commit -m "chore: initialize <nombre> service from template"
-git push
-git push origin main:dev                # crea la rama dev
-```
-
-`init-service.sh` renombra el paquete (`org.snippetsearcher.template` → `org.snippetsearcher.<nombre>`),
-el proyecto de Gradle, la aplicación de Spring, la base y los servicios del compose. El nombre va en
-minúscula y sin guiones, porque es parte del paquete de Java.
-
-Después, actualizá el título y la descripción de este README.
+Creado desde [snippet-searcher-service-template](https://github.com/los-implementadores/snippet-searcher-service-template).
 
 ## Qué trae
 

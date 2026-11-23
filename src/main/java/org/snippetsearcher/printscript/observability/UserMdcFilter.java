@@ -1,4 +1,4 @@
-package org.snippetsearcher.template.observability;
+package org.snippetsearcher.printscript.observability;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

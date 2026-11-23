@@ -1,4 +1,4 @@
-package org.snippetsearcher.template.auth;
+package org.snippetsearcher.printscript.auth;
 
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.jwt;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;

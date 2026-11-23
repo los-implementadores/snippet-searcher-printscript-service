@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:template;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DB_CLOSE_DELAY=-1
+    url: jdbc:h2:mem:printscript;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DB_CLOSE_DELAY=-1
     username: sa
     password: ""
   security:
@@ -8,7 +8,7 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: https://issuer.test/
-          audiences: template-test
+          audiences: printscript-test
 
 cors:
   allowed-origins: http://ui.test

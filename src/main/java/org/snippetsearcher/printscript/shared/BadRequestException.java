@@ -1,4 +1,4 @@
-package org.snippetsearcher.template.shared;
+package org.snippetsearcher.printscript.shared;
 
 /** The request is well formed but its content doesn't make sense for this operation. */
 public class BadRequestException extends RuntimeException {

@@ -17,6 +17,6 @@ USER app
 EXPOSE 8080
 # The agent stays off until the environment turns it on with a license key (see .env.example).
 ENV SPRING_PROFILES_ACTIVE=production \
-    NEW_RELIC_APP_NAME=template \
+    NEW_RELIC_APP_NAME=printscript \
     NEW_RELIC_AGENT_ENABLED=false
 ENTRYPOINT ["java", "-javaagent:/app/newrelic/newrelic.jar", "-jar", "/app/app.jar"]
