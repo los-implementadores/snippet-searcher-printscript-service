@@ -1,4 +1,4 @@
-package org.snippetsearcher.template.http;
+package org.snippetsearcher.printscript.http;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;

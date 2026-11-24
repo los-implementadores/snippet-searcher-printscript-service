@@ -1,7 +1,7 @@
-package org.snippetsearcher.template.http;
+package org.snippetsearcher.printscript.http;
 
 import java.io.IOException;
-import org.snippetsearcher.template.observability.CorrelationId;
+import org.snippetsearcher.printscript.observability.CorrelationId;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpRequest;
 import org.springframework.http.client.ClientHttpRequestExecution;
@@ -24,7 +24,7 @@ class ContextPropagationInterceptor implements ClientHttpRequestInterceptor {
     HttpHeaders headers = request.getHeaders();
     Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
     if (authentication instanceof JwtAuthenticationToken jwtAuthentication
-        && !headers.containsKey(HttpHeaders.AUTHORIZATION)) {
+        && !headers.containsHeader(HttpHeaders.AUTHORIZATION)) {
       headers.setBearerAuth(jwtAuthentication.getToken().getTokenValue());
     }
     CorrelationId.current().ifPresent(id -> headers.set(CorrelationId.HEADER, id));

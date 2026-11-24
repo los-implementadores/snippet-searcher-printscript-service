@@ -1,13 +1,13 @@
-package org.snippetsearcher.template;
+package org.snippetsearcher.printscript;
 
 import java.util.Map;
 import org.slf4j.MDC;
-import org.snippetsearcher.template.observability.CorrelationId;
-import org.snippetsearcher.template.observability.UserMdcFilter;
-import org.snippetsearcher.template.shared.BadRequestException;
-import org.snippetsearcher.template.shared.DownstreamServiceException;
-import org.snippetsearcher.template.shared.ForbiddenOperationException;
-import org.snippetsearcher.template.shared.ResourceNotFoundException;
+import org.snippetsearcher.printscript.observability.CorrelationId;
+import org.snippetsearcher.printscript.observability.UserMdcFilter;
+import org.snippetsearcher.printscript.shared.BadRequestException;
+import org.snippetsearcher.printscript.shared.DownstreamServiceException;
+import org.snippetsearcher.printscript.shared.ForbiddenOperationException;
+import org.snippetsearcher.printscript.shared.ResourceNotFoundException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,4 +1,4 @@
-package org.snippetsearcher.template.shared;
+package org.snippetsearcher.printscript.shared;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

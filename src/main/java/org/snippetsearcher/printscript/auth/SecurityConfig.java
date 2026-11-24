@@ -1,8 +1,8 @@
-package org.snippetsearcher.template.auth;
+package org.snippetsearcher.printscript.auth;
 
 import java.util.List;
-import org.snippetsearcher.template.observability.CorrelationId;
-import org.snippetsearcher.template.observability.UserMdcFilter;
+import org.snippetsearcher.printscript.observability.CorrelationId;
+import org.snippetsearcher.printscript.observability.UserMdcFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;

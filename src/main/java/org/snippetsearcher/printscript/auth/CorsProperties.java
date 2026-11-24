@@ -1,4 +1,4 @@
-package org.snippetsearcher.template.auth;
+package org.snippetsearcher.printscript.auth;
 
 import java.util.List;
 import org.springframework.boot.context.properties.ConfigurationProperties;

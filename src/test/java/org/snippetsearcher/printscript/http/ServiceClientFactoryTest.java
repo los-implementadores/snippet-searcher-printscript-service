@@ -1,4 +1,4 @@
-package org.snippetsearcher.template.http;
+package org.snippetsearcher.printscript.http;
 
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.header;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.headerDoesNotExist;
@@ -9,7 +9,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.slf4j.MDC;
-import org.snippetsearcher.template.observability.CorrelationId;
+import org.snippetsearcher.printscript.observability.CorrelationId;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.oauth2.jwt.Jwt;

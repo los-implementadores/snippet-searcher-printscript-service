@@ -1,4 +1,4 @@
-package org.snippetsearcher.template.observability;
+package org.snippetsearcher.printscript.observability;
 
 import java.util.Optional;
 import java.util.UUID;

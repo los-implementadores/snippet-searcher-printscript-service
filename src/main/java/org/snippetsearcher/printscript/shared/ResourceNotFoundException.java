@@ -1,4 +1,4 @@
-package org.snippetsearcher.template.shared;
+package org.snippetsearcher.printscript.shared;
 
 /** The requested resource does not exist or the caller is not allowed to know it exists. */
 public class ResourceNotFoundException extends RuntimeException {
